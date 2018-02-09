@@ -1,0 +1,94 @@
+escape ^gg
+altscreen on
+defbce on
+set term=screen-256color
+bind j focus down
+bind k focus up
+bind h focus left
+bind l focus right
+
+
+caption always "%{+b gk}%c %{rk}%d/%m/%Y | %?%{yk}%-Lw%?%{wb}%n*%f %t%?(%u)%?%?%{yk}%+Lw%?"
+
+bind f eval "caption splitonly"
+
+bind F eval "caption always"
+
+
+hardstatus string "%{.kc}%-w%{.kw}%n*%t%{-}%+w %= %2` %3`/%4` %6`/%7` %5`/%9` %c%a %m/%d/%Y" #black+cyan+normal+white selected
+
+bindkey "\033\060" select 0
+
+bindkey "\033\302\272" select 0
+
+bindkey "\033\061" select 1
+
+bindkey "\033\062" select 2
+
+bindkey "\033\063" select 3
+
+bindkey "\033\064" select 4 
+
+bindkey "\033\065" select 5 
+
+bindkey "\033\066" select 6
+
+bindkey "\033\067" select 7
+
+bindkey "\033\068" select 8
+
+bindkey "\033\069" select 9
+
+
+bind -c shiftalt A copy # Up
+
+bind -c shiftalt B colon
+
+bind -c shiftalt C next
+
+bind -c shiftalt D prev
+
+bind -c shiftalt P windowlist -b # F1
+
+bind -c shiftalt Q screen
+
+bind -c shiftalt R select 0
+
+bind -c shiftalt S select 1
+
+bind -c shiftalt 0 stuff ^[[20
+
+bind -c shiftalt 1 stuff ^[[21
+
+bind -c shiftalt 3 stuff ^[[23
+
+bind -c shiftalt 4 stuff ^[[24
+
+bindkey -d -k kD
+
+bindkey -d -k kb
+
+bindkey ^[^[[ command -c shiftalt # Rxvt/PuTTY Alt
+
+bindkey ^[^[O command -c shiftalt # Rxvt/PuTTY Alt
+
+bindkey ^[O2 command -c shiftalt # XTerm F-Key Shift
+
+bindkey ^[O3 command -c shiftalt # XTerm F-Key Alt
+
+bindkey ^[[2 command -c shiftalt # XTerm Arrow Shift
+
+bindkey ^[[1;2 command -c shiftalt # XTerm Newest Shift
+
+bindkey ^[[1;3 command -c shiftalt # XTerm Newest Alt​
+
+screen -t fuego
+screen -t linux
+stuff "cd ~/kiet/linux ;l \n"
+screen -t fuego
+stuff "cd ~/fuegoblaze ;l \n"
+screen -t dts
+screen -t dts
+screen -t dts
+select 0
+stuff "exit\n"

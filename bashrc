@@ -114,9 +114,8 @@ if ! shopt -oq posix; then
   fi
 fi
 alias gitlog="git log --graph --pretty=oneline --abbrev-commit"
+alias ...="./run"
 alias ..="dirs -v"
-alias b3="~/Workspace/buildkernel_e2x.sh"
-alias b4="~/Workspace/4.9-kernel.sh"
 
 alias .1="pushd +1 &>/dev/null;l "
 alias .2="pushd +2 &>/dev/null;l "
@@ -140,9 +139,14 @@ alias .19="pushd +19 &>/dev/null;l "
 alias .20="pushd +20 &>/dev/null;l "
 
 alias ..docker="docker start -ai 9dfb05676502"
-alias b3="bash ~/Workspace/buildkernel_e2x.sh"
-alias b4="bash ~/Workspace/4.9-kernel.sh"
-alias bt="bash ~/Workspace/ale6.sh"
+alias .b="bash ~/kiet/linux4.15/build-lager.sh"
+alias .b3="bash ~/kiet/linux4.15/build-gose.sh"
+alias .bt="bash /home/rvc/kiet/linuxTemp/build-lager.sh"
+alias .bt3="bash /home/rvc/kiet/linuxTemp/build-gose.sh"
+alias vimdt="cd ~/kiet/linux4.15/linux-4.15/arch/arm/boot/dts; vim r8a7790.dtsi r8a7790-lager.dts"
+alias vimdt3="cd ~/kiet/linux4.15/linux-4.15/arch/arm/boot/dts; vim r8a7793.dtsi r8a7793-gose.dts"
+alias .cdk="cd ~/kiet/linux4.15/linux-4.15/"
+alias .cdkt="cd ~/kiet/linuxTemp/linux"
 alias cd1="cd .."
 alias cd2="cd ../.."
 alias cd3="cd ../../.."
@@ -151,16 +155,12 @@ alias cd5="cd ../../../../.."
 alias cd6="cd ../../../../../.."
 function mkcd () { mkdir -p "$@" && eval cd "\"\$$#\"";
 }
-alias .ga="tmux attach -t kietga"
 export PATH="$HOME/bin:$PATH"
 export VISUAL=vim
 export EDITOR="$VISUAL"
 export TERM=xterm-256color
-export a=/home/rvc/Workspace/E2X_Input_20170713/e2x-linuxA
-export b=/home/rvc/Workspace/E2X_Input_20170713/e2x-linuxB
-export g="grep -RInH"
-export c="~/fuegoblaze/fuego-core"
-export dt="r8a77945-ale6.dts"
+export g1="grep -RInH"
+export g="grep -r -i --include=*.c --include=*.h"
 export LANGUAGE=
 export LC_ALL=
-
+source ~/kiet/.dir.sh
