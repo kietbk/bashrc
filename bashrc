@@ -147,6 +147,8 @@ alias vimdt="cd ~/kiet/linux4.15/linux-4.15/arch/arm/boot/dts; vim r8a7790.dtsi 
 alias vimdt3="cd ~/kiet/linux4.15/linux-4.15/arch/arm/boot/dts; vim r8a7793.dtsi r8a7793-gose.dts"
 alias .cdk="cd ~/kiet/linux4.15/linux-4.15/"
 alias .cdkt="cd ~/kiet/linuxTemp/linux"
+alias gitfile="git diff-tree --no-commit-id --name-only -r HEAD"
+alias gitlistfile="git ls-tree --name-only -r HEAD"
 alias cd1="cd .."
 alias cd2="cd ../.."
 alias cd3="cd ../../.."
@@ -164,3 +166,9 @@ export g="grep -r -i --include=*.c --include=*.h"
 export LANGUAGE=
 export LC_ALL=
 source ~/kiet/.dir.sh
+
+function findx {
+    grep -E $@ ~/.filekm
+}
+
+
