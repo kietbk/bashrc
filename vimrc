@@ -54,7 +54,6 @@ set secure                                  " prohibit .vimrc files to execute s
 set relativenumber
 " Additional mappings for Esc (useful for MacBook with touch bar)
 inoremap jj <Esc>
-inoremap JJ <Esc>
 
 "=====================================================
 "" Tabs / Buffers settings
